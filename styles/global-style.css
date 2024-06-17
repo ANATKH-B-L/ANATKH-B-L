@@ -1,0 +1,528 @@
+/* Global Styles */
+@font-face {
+    font-family: 'Kopub Batang';
+    src: url("../font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
+		 url("../font/KoPubWorld Batang Medium.ttf") format('truetype'),
+		 url("../font/KoPubWorld Batang-Medium.woff") format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+body, html {
+	margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    overflow-x:hidden;
+    background-color: #eefaff;
+	background-image: url("../image/Global-image/header.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.screen {
+	width: 100vw;
+	height:100vh;
+	margin: 0 auto;
+}
+#screen1 {
+	display:flex;
+    justify-content: center;
+	background-image: url("../image/Global-image/배경5.webp");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    align-items: center;
+}
+
+.subpage{
+	position: relative;
+    width: 100%;
+    height: 100%;
+	margin:0 auto;
+    flex-wrap: wrap;
+	animation: fadeIn 1s ease-out;
+}
+.paper{
+	width:90%;
+	margin:0 auto;
+    flex-wrap: wrap;
+	background:linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0), rgba(238, 250, 255, 0.7) 10%);
+}
+.text-content{
+	width: 90%;
+	margin: 0 auto;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+header {
+    display: flex;
+	margin: 0 auto;
+    height: 270px;
+}
+
+main{
+	margin: 10% auto;
+	font-family: 'Kopub Batang';
+	font-weight: lighter;
+	text-align: justify;
+}
+
+#nextButton, #simbol {
+	background-image: url("../image/아이콘1.webp");
+	background-repeat: no-repeat;
+	background-size:100%;
+	width: 250px;
+	height: 250px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+	opacity: 0.8;
+}
+#simbol{
+	width:50px;
+	height:50px;
+}
+
+.Page-top-image{
+	display:grid;
+	user-select:none;
+	margin: 0 auto;
+	width:400px;
+}
+
+#nextButton:hover, simbol:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+	opacity:1;
+}
+
+#menuButton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    color:white;
+}
+/* 버튼 스타일 및 배치 */
+.button-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+.button-container button {
+	user-select : none;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kopub Batang', sans-serif;
+    margin: 5px;
+}
+.button-container button:hover {
+	transform:scale(1.1);
+    transition: transform 0.3s, text-shadow 0.3s;
+    text-shadow: 0 0 10px rgba(0, 11, 128, 0.8);
+}
+#noticeButton,
+#worldButton,
+#guideButton,
+#systemButton,
+#battleButton,
+#memberButton{
+    aspect-ratio: 991 / 693;
+	width:180px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	align-items:end;
+	text-shadow: 0 0 15px rgba(0, 11, 128, 1), 0 0 15px rgba(0, 11, 128, 1);
+}
+#mainButton{
+	top: -5%;
+    width: 400px;
+	background-image: url("../image/Global-image/logo2.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	user-select : none;
+    aspect-ratio: 1030 / 615; /* 정사각형 비율 설정 */	
+}
+
+#noticeButton {
+	background-image:url("../image/Global-image/공지버튼.webp");
+    top: 10%;
+    left: 7%;
+}
+
+#worldButton {
+	background-image:url("../image/Global-image/월드버튼.webp");
+    top: 50%;
+    left: 17%;
+}
+
+#guideButton {
+	background-image:url("../image/Global-image/캐가버튼.webp");
+    top: 80%;
+    left: 30%;
+}
+
+#systemButton {
+	background-image:url("../image/Global-image/제네럴시스템버튼.webp");
+    top: 80%;
+    right: 30%;
+}
+
+#battleButton {
+	background-image:url("../image/Global-image/배틀시스템버튼.webp");
+    top: 50%;
+    right: 17%;
+}
+
+#memberButton {
+	background-image:url("../image/Global-image/멤버버튼.webp");
+    top: 10%;
+    right: 7%;
+}
+
+.subpage{
+	margin-top:100px;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    color: white;
+    padding-top: 60px;
+    z-index: 999;
+    transition: left 0.3s ease;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-100%);
+}
+
+.menu ul li:hover {
+    transform: scale(1.5);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+	font-family: 'Kopub Batang', sans-serif;
+}
+.ThemeSong-Player {
+    position: fixed;
+	bottom: 2%;
+    left: 2%;
+    display: inline-block;
+    width: 30px;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: 'Kopub Batang', sans-serif;
+}
+
+.ThemeSong-Player button {
+    user-select: none;
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000B80;
+	opacity: 0.2;
+}
+.ThemeSong-Player button:hover {
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+
+#volumeControl {
+    position: absolute;
+	top:40%;
+    left: -100px;
+    transform: translateY(50%);
+    width: 100px;
+    height: 5px;
+    background: linear-gradient(to right, #00C9E9 0%, #00C9E9 100%);
+    border-radius: 8px;
+    outline: none;
+    transition: opacity 0.5s ease, visibility 1s ease, left 0.5s ease, background 450ms ease-in;
+    -webkit-appearance: none;
+    accent-color: #000B80;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.ThemeSong-Player:hover #volumeControl {
+    opacity: 1;
+    visibility: visible;
+    left: 50px;
+}
+.banner{
+	display:flex;
+    position: relative;
+	width:100%;
+	height:30px;
+}
+
+#banner1, #banner2{
+	height:48px;
+	position: absolute;
+	top:20px;
+	user-select:none;
+}
+#banner1{
+	left:4.4%;
+}
+#banner2{
+	right:4.4%;
+}
+
+/*슬라이더*/
+.slider {
+	display:flex;
+    position: relative;
+    overflow: hidden;
+	align-items:center;
+    width: 90%;
+	margin: 30px auto 0;
+	height:30px;
+	background-color: #fff;
+	border-top: 2px solid #0b5394;
+	border-bottom: 2px solid #0b5394;
+}
+.gallery {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+	color: #00c9e9;
+	text-align:center;
+    animation: slide-left 60s linear infinite;
+}
+
+.gallery li {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 20px;
+    opacity: 1;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	white-space : nowrap; 
+}
+@keyframes slide-left {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-600%); }
+}
+
+.mob-scrollup{
+	position: relative;
+	width:100%;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+#scrollToTop {
+	position: absolute;
+	user-select : none;
+	border: none;
+	background-color: transparent;
+	font-size: 20px;
+	cursor: pointer;
+	color: #000B80;
+	transition: transform 0.3s, box-shadow 0.3s;
+	font-family: 'Kopub Batang', sans-serif;
+	bottom:5px;
+}
+#scrollToTop:hover {
+	transform: scale(1.5);
+}
+footer{
+	color:#999;
+	text-align:center;
+	font-size:12px;
+	font-family: 'Kopub Batang', sans-serif;
+}
+@media (max-width: 767px){
+	header {
+        min-width: 320px;        
+        height: 10em;
+        margin-top: 20px;
+		margin-bottom: 100px;
+    }
+	
+	#section-all{
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+	#nextButton{
+		width:150px;
+		height:150px;
+	}
+
+    .gallery {
+        width: 100%;
+        height: 20px;
+		font-size:10px;
+    }
+	.menu {
+		width:100%;
+	}
+
+    .button-container {
+        display: flex;
+		height: 50%;
+    }
+	.slider {
+		margin-top:0;
+	}
+	
+	#noticeButton,
+	#worldButton,
+	#guideButton,
+	#systemButton,
+	#battleButton,
+	#memberButton{
+		display:none;	
+	}
+	#mainButton{ 
+		width:80%;
+	}
+	#mainButton:hover{
+		transform:scale(1);
+	}
+	
+	#GeneralAccount{
+		width:75px;
+	}
+	
+	header {
+        max-width: 1100px;
+        height: 230px;
+    }
+	#screen2 main{
+		max-width: 1200px;
+		width:90%;
+	}
+    .gallery {
+        max-width: 1200px;
+        height: 20px;
+    }
+	#banner1, #banner2{
+	top:-10px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px){
+	header {
+        min-width: 320px;        
+        height: 12em;
+		margin-bottom: 80px;
+    }
+	#screen2{
+		padding-top:10px;
+	}
+	#screen2 main{
+		max-width: 1200px;
+		width:90%;
+		top:200px;
+	}
+	.slider {
+		margin-top:0;
+	}
+    .gallery {
+        width: 100%;
+        height: 20px;
+		font-size:12px;
+    }
+	.menu {
+		width:100%;
+	}
+
+    .button-container {
+        display: flex;
+		height: 40%;
+    }
+	
+	#noticeButton,
+	#worldButton,
+	#guideButton,
+	#systemButton,
+	#battleButton,
+	#memberButton{
+		display: none;
+	}
+	#mainButton{
+		top:0;
+		width:50%;
+	}
+	#mainButton:hover{
+		transform:scale(1);
+	}
+	
+	#GeneralAccount{
+		width:75px;
+	}
+	#screen2 main{
+		max-width: 1200px;
+		width:90%;
+	}
+    .gallery {
+        max-width: 1200px;
+        height: 20px;
+    }
+	#banner1, #banner2{
+	top:-10px;
+	}
+	#banner1{
+		left:4%;
+	}
+	#banner2{
+		right:4%;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) {
+}

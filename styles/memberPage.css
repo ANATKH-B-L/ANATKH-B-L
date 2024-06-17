@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'Kopub Batang';
+    src: url("../font/KoPubWorld Batang_Pro Medium.otf") format('opentype'),
+		 url("../font/KoPubWorld Batang Medium.ttf") format('truetype'),
+		 url("../font/KoPubWorld Batang-Medium.woff") format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '국립박물관문화재단';
+    src: url("../font/국립박물관문화재단클래식L.otf") format('opentype'),
+		 url("../font/국립박물관문화재단클래식L.ttf") format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
+#screen3{
+	background-color:#000;
+    font-family: '국립박물관문화재단';
+	font-size:20px;
+    justify-content: center;
+	align-items:center;
+	text-align:center;
+	animation: fadeIn 1s ease-out;
+}
+
+#hint-text{
+    font-family: '국립박물관문화재단';
+}
+.secret{
+	background-image: url("../image/easter.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	user-select : none;
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
+#password-inputBox{
+	display:none;
+	animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#password-container {
+    text-align: center;
+    background-color: transparent;
+    padding: 20px;
+	border:none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+#password-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#password {
+    font-family: '국립박물관문화재단';
+    padding: 10px;
+    margin: 10px 0;
+    border: transparent;
+    background-color: transparent;
+    width: 50%;
+    box-sizing: border-box;
+	text-align:center;
+}
+#password:focus {
+    outline: none;
+    border: none;
+}
+
+#protect-button:hover {
+	color: #fff;
+    background-color: #0056b3;
+}
+
+#error-message {
+    color: red;
+    display: none;
+    margin-top: 10px;
+}
+
+#protected-content {
+    display: none;
+	animation: fadeInUp 1s ease forwards;
+}
+#easter-text{
+	display:none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.nav-btn {
+	width:10%;	
+    aspect-ratio: 3 / 1;
+    border: none;
+    cursor: pointer;
+    background-color: lightgray;
+    color: black;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.nav-btn.disabled {
+    background-color: black;
+    color: white;
+}
+
+.profile {
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.grade {
+    display: none;
+}
+
+
+@media (max-width: 991px){
+	#memberPage{
+		margin-bottom:90%;
+	}
+	#easter-text{
+		display:block;
+	}
+}

@@ -1,0 +1,3 @@
+.g-system_list li::marker {
+	content:'✶ ';
+}
