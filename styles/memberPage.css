@@ -22,7 +22,9 @@
 	text-align:center;
 	animation: fadeIn 1s ease-out;
 }
-
+#kopubnotice{
+    font-family: 'Kopub Batang';
+}
 #hint-text{
     font-family: '국립박물관문화재단';
 }
@@ -50,6 +52,18 @@
   to {
     opacity: 1;
   }
+}
+.text-container span {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: reveal 1s forwards;
+}
+
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 #password-container {
     text-align: center;

@@ -41,3 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		pageA.style.display = 'block';
 	});
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const lines = document.querySelectorAll(".text-container span");
+    lines.forEach((line, index) => {
+        line.style.animationDelay = `${index * 0.5}s`;
+    });
+});
+
