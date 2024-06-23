@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const lines = document.querySelectorAll(".text-container span");
     lines.forEach((line, index) => {
-        line.style.animationDelay = `${index * 0.5}s`;
+        line.style.animationDelay = `${index * 1.2}s`;
     });
 });
 

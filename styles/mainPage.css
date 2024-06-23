@@ -20,36 +20,36 @@
 .schedule-slider {
     position: relative;
     overflow: hidden;
-	width:70%;
+	width:65%;
 	user-select : none;
+	margin-left:3%;
 }
-.schedule-slider button{
-	display:none;
+.schedule-container {
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+    border: none;
+    position: relative;
 }
-.schedule {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+
+.schedule-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
-	position: relative;
-    width: 100%;
-    height: 100%;
-	align-items: stretch;
 }
-.schedule li {
-    flex-shrink: 0;
-    height: 100%;
-	width:100%;
-    opacity: 1;
+
+.schedule-slide {
+    min-width: 100%;
+    box-sizing: border-box;
 }
-.schedule li img {
+
+.schedule-slide img {
     width: 100%;
+    height: auto;
 }
 
 .schedule-slider button{
 	position: absolute;
-	top: 50%;
+	top: 40%;
     background-color: transparent;
     color: black;
     padding: 10px 20px;
@@ -107,17 +107,17 @@
 }
 #QnA{	
 	transform:rotate(9deg);
-	top:47%;
+	top:65%;
 	left:12%;
 }
 #wiki{
 	transform:rotate(25deg);
 	width:30%;
-    top: 80%;
+    top: 94%;
     right: 32%;
 }
 #reception-guide{
-    top: 38%;
+    top: 52%;
     right: 25%;
 	width: 30%;
 }
@@ -152,12 +152,15 @@
 
 @media (max-width: 991px){
 	#mainContent{
-		margin-bottom:120%;
+		margin-bottom:150%;
 	}
 	.schedule-slider{
 		width:100%;
 		margin: 0 auto;
 		padding-top:5%;
+	}
+	.schedule-container{
+		height:max-content;
 	}
 	.main-button{
 		position: absolute;
@@ -178,35 +181,35 @@
 		transform:rotate(25deg);
 		width:40%;
 		left:10%;
-		top: -35%
+		top: 12%
 	}
 	#reception-guide{
 		width:45%;
 		left: 45%;
-		top: -7%
+		top: -15%
 	}
 	#QnA{
 		transform:rotate(-7deg);
 		width:45%;
 		left:10%;
-		top:12%;
+		top:67%;
 	}	
 	#wiki{
 		transform:rotate(-21deg);
 		width:47%;
 		right:5%;
-		top:55%;
+		top:59%;
 	}
 	#quill{
 		transform:rotate(-8deg);
 		width:32%;
 		left:15%;
-		top:60%;
+		top:132%;
 	}
 	#GeneralAccount{
 		width:30%;
 		right:10%;
-		top:80%;
+		top:90%;
 	}
 }
 
