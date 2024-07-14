@@ -15,7 +15,7 @@
 }
 
 #mainContent{
-	margin-bottom:8%;
+	margin-bottom: 0;
 }
 .schedule-slider {
     position: relative;
@@ -75,7 +75,7 @@
 	width:100%;
 }
 #QnA, #reception, #wiki, #quill, #reception-guide{
-	width:30%;
+	width:28%;
 	position: absolute;
 	user-select : none;
 	filter:drop-shadow(5px 12px 7px #000208);
@@ -157,7 +157,6 @@
 	.schedule-slider{
 		width:100%;
 		margin: 0 auto;
-		padding-top:5%;
 	}
 	.schedule-container{
 		height:max-content;
@@ -185,7 +184,7 @@
 	}
 	#reception-guide{
 		width:45%;
-		left: 45%;
+		left: 51%;
 		top: -15%
 	}
 	#QnA{

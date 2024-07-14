@@ -14,6 +14,7 @@
     font-style: normal;
 }
 #screen3{
+	display:none;
 	background-color:#000;
     font-family: '국립박물관문화재단';
 	font-size:20px;
@@ -66,6 +67,7 @@
     }
 }
 #password-container {
+	display:none;
     text-align: center;
     background-color: transparent;
     padding: 20px;
@@ -74,41 +76,7 @@
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-#password-container.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-#password {
-    font-family: '국립박물관문화재단';
-    padding: 10px;
-    margin: 10px 0;
-    border: transparent;
-    background-color: transparent;
-    width: 50%;
-    box-sizing: border-box;
-	text-align:center;
-}
-#password:focus {
-    outline: none;
-    border: none;
-}
-
-#protect-button:hover {
-	color: #fff;
-    background-color: #0056b3;
-}
-
-#error-message {
-    color: red;
-    display: none;
-    margin-top: 10px;
-}
-
-#protected-content {
-    display: none;
-	animation: fadeInUp 1s ease forwards;
-}
 #easter-text{
 	display:none;
 }
@@ -116,46 +84,124 @@
 .navbar {
     display: flex;
     justify-content: space-around;
-    margin: 20px;
+    margin: 5%;
 }
 
 .nav-btn {
-	width:10%;	
-    aspect-ratio: 3 / 1;
+	width:20%;
+    aspect-ratio: 421 / 187;
     border: none;
     cursor: pointer;
-    background-color: lightgray;
-    color: black;
+    background-color: transparent;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
+	opacity:0.8;
+    transition: opacity 0.5s ease-out;
+    margin: 0 20px;
 }
 
-.nav-btn:hover {
-    background-color: gray;
-    color: white;
+#btn1st{
+	background-image: url("../image/member-image/1학년 미클릭.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btn1st:hover{
+	background-image: url("../image/member-image/1학년 클릭.webp");
+	opacity:1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btn4th{
+	background-image: url("../image/member-image/4학년 미해금.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btn7th{
+	background-image: url("../image/member-image/7학년 미해금.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#btnA{
+	background-image: url("../image/member-image/성인 미해금.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .nav-btn.disabled {
-    background-color: black;
+    background-color: transparent;
     color: white;
 }
 
 .profile {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     font-size: 24px;
+    display: block;
 }
 
 .grade {
-    display: none;
+    display: block;
 }
 
+.dorm{
+	display:flex;
+    flex-direction: row;
+    justify-content: center;
+	align-items:center;
+	margin: 2%;
+}
+.dorm div {
+	opacity:0;
+    transform: translateY(-100px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.dorm img{
+	width:80%;
+}
+#drom-icon{
+	width:90%;
+    aspect-ratio: 438 / 485;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+}
 
 @media (max-width: 991px){
 	#memberPage{
-		margin-bottom:90%;
+		margin-bottom:10%;
 	}
 	#easter-text{
-		display:block;
+		display:none;
+	}
+	.nav-btn{
+		width:30%;
+		margin: 0 2%;
+	}
+	.grade {
+		display: block;
+	}
+	
+	.dorm{
+		display:flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items:center;
+		margin: 2%;
+	}
+	.dorm div {
+		opacity:0;
+		transform: translateY(-100px);
+		transition: opacity 0.5s, transform 0.5s;
+	}
+	.dorm img{
+		width:90%;
+	}
+	#drom-icon{
+		width:100%;
+		aspect-ratio: 438 / 485;
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		
 	}
 }

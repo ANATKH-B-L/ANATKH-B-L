@@ -8,6 +8,5 @@ document.addEventListener("DOMContentLoaded", function() {
     galleryList.appendChild(firstItem);
   }
   
-  // Rotate gallery every 3 seconds (adjust interval as needed)
-  setInterval(rotateGallery, 3000);
+  setInterval(rotateGallery, 500);
 });

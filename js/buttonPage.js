@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const battlePage = document.getElementById('battlePage');         // 배틀 시스템
     const memberPage = document.getElementById('memberPage');         // 멤버란
 
+	const dorms = document.querySelectorAll('.dorm');
+    let delay = 0;
+
     var player;
     var isPlaying = false;
 
@@ -83,7 +86,21 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('playButton').textContent = '▶';
         }
     });
+	function portrait() {
+		dorms.forEach((dorm, dormIndex) => {
+            const elements = Array.from(dorm.children);
+            const elementsToAnimate = (dormIndex === 1 || dormIndex === 3) ? elements.reverse() : elements;
 
+            elementsToAnimate.forEach((element) => {
+                element.style.opacity = '0';
+                setTimeout(() => {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, delay);
+                delay += 500;
+            });
+        });
+	}
     mainButton.addEventListener('click', function() {
         hideAllPages();
         mainContent.style.display = 'block';
@@ -117,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function() {
     memberButton.addEventListener('click', function() {
         hideAllPages();
         memberPage.style.display = 'block';
+		portrait();
     });
 	
 	function checkPassword() {

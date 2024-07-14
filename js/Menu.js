@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	let menuVisible = false;
 	const links = document.querySelectorAll('.menu a');				//메뉴 글자
 	const subpages = document.querySelectorAll('.subpage');			//바뀌는 페이지 부분 블록
+	
+	const dorms = document.querySelectorAll('.dorm');
+    let delay = 0;
 
 	menuButton.addEventListener('click', function () {
 		const menuWidth = menu.offsetWidth;
@@ -64,6 +67,23 @@ document.addEventListener("DOMContentLoaded", function() {
                 subpage.style.display = 'none';
                 if (subpage.id === targetId) {
                     subpage.style.display = 'block';
+					if(subpage.id === "memberPage")
+					{
+						dorms.forEach((dorm, dormIndex) => {
+						const elements = Array.from(dorm.children);
+						const elementsToAnimate = (dormIndex === 1 || dormIndex === 3) ? elements.reverse() : elements;
+			
+						elementsToAnimate.forEach((element) => {
+							element.style.opacity = '0';
+							setTimeout(() => {
+								element.style.opacity = '1';
+								element.style.transform = 'translateY(0)';
+							}, delay);
+							delay += 500;
+            });
+        });
+					}
+					
                 }
             });
             menu.style.display = 'none';

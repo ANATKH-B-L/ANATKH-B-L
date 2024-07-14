@@ -208,7 +208,7 @@ main{
 }
 
 .subpage{
-	margin-top:100px;
+	margin-top:30px;
 }
 
 .menu {
@@ -337,7 +337,7 @@ main{
     list-style-type: none;
 	color: #00c9e9;
 	text-align:center;
-    animation: slide-left 60s linear infinite;
+    animation: slide-left 12s linear infinite;
 }
 
 .gallery li {
@@ -351,8 +351,8 @@ main{
 	white-space : nowrap; 
 }
 @keyframes slide-left {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-600%); }
+  0% { transform: translateX(400%); }
+  100% { transform: translateX(-100%); }
 }
 
 .mob-scrollup{
