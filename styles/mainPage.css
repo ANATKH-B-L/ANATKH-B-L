@@ -22,7 +22,7 @@
     overflow: hidden;
 	width:65%;
 	user-select : none;
-	margin-left:3%;
+	margin-left:5%;
 }
 .schedule-container {
     overflow: hidden;
@@ -153,10 +153,11 @@
 @media (max-width: 991px){
 	#mainContent{
 		margin-bottom:150%;
+		margin-top:0px;
 	}
 	.schedule-slider{
-		width:100%;
-		margin: 0 auto;
+		width:90%;
+		margin: 0 5%;
 	}
 	.schedule-container{
 		height:max-content;
@@ -210,13 +211,4 @@
 		right:10%;
 		top:90%;
 	}
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-    
-
-}
-
-@media (min-width: 1200px) {
-  
 }
