@@ -72,8 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
     });
     document.getElementById('nextButton').addEventListener('click', function() {
-        document.getElementById('screen1').style.display = 'none';
-        document.getElementById('screen2').style.display = 'block';
+		const chapterOverlay = document.getElementById('chapterOverlay');
+		chapterOverlay.style.display = 'block';
+		
+		setTimeout(function() {
+                chapterOverlay.style.display = 'none';
+                document.getElementById('screen1').style.display = 'none';
+                document.getElementById('screen2').style.display = 'block';
+            }, 3000);
+		
         hideAllPages();
         mainContent.style.display = 'block';
         if (player && typeof player.playVideo === 'function') {
