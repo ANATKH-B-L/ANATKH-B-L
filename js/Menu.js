@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const links = document.querySelectorAll('.menu a');				//메뉴 글자
 	const subpages = document.querySelectorAll('.subpage');			//바뀌는 페이지 부분 블록
 	
-	const dorms = document.querySelectorAll('.dorm');
+	const dorm4 = document.querySelectorAll('.dorm4');
     let delay = 0;
 
 	menuButton.addEventListener('click', function () {
@@ -69,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     subpage.style.display = 'block';
 					if(subpage.id === "memberPage")
 					{
-						dorms.forEach((dorm, dormIndex) => {
-						const elements = Array.from(dorm.children);
-						const elementsToAnimate = (dormIndex === 1 || dormIndex === 3) ? elements.reverse() : elements;
+						dorm4.forEach((dorm4, dorm4Index) => {
+						const elements = Array.from(dorm4.children);
+						const elementsToAnimate = (dorm4Index%2 === 1) ? elements.reverse() : elements;
 			
 						elementsToAnimate.forEach((element) => {
 							element.style.opacity = '0';
