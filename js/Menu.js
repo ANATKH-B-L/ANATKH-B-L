@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const links = document.querySelectorAll('.menu a');				//메뉴 글자
 	const subpages = document.querySelectorAll('.subpage');			//바뀌는 페이지 부분 블록
 	
-	const dorm4 = document.querySelectorAll('.dorm4');
+	const dorm7 = document.querySelectorAll('.dorm7');
     let delay = 0;
 
 	menuButton.addEventListener('click', function () {
@@ -67,22 +67,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 subpage.style.display = 'none';
                 if (subpage.id === targetId) {
                     subpage.style.display = 'block';
-					if(subpage.id === "memberPage")
-					{
-						dorm4.forEach((dorm4, dorm4Index) => {
-						const elements = Array.from(dorm4.children);
-						const elementsToAnimate = (dorm4Index%2 === 1) ? elements.reverse() : elements;
+				if(subpage.id === "memberPage")
+				{
+					dorm7.forEach((dorm7, dorm7Index) => {
+					const elements = Array.from(dorm7.children);
+					const elementsToAnimate = (dorm7Index%2 === 1) ? elements.reverse() : elements;
 			
-						elementsToAnimate.forEach((element) => {
-							element.style.opacity = '0';
-							setTimeout(() => {
-								element.style.opacity = '1';
-								element.style.transform = 'translateY(0)';
-							}, delay);
-							delay += 500;
-            });
-        });
-					}
+					elementsToAnimate.forEach((element) => {
+						element.style.opacity = '0';
+						setTimeout(() => {
+							element.style.opacity = '1';
+							element.style.transform = 'translateY(0)';
+						}, delay);
+						delay += 500;
+						});
+					});
+				}
 					
                 }
             });

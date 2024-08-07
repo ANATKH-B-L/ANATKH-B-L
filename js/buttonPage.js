@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const battlePage = document.getElementById('battlePage');         // 배틀 시스템
     const memberPage = document.getElementById('memberPage');         // 멤버란
 
-	const dorm4 = document.querySelectorAll('.dorm4');
+	const dorm7 = document.querySelectorAll('.dorm7');
     let delay = 0;
 
     var player;
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 chapterOverlay.style.display = 'none';
                 document.getElementById('screen1').style.display = 'none';
                 document.getElementById('screen2').style.display = 'block';
-            }, 3000);
+            }, 8000);
 		
         hideAllPages();
         mainContent.style.display = 'block';
@@ -93,10 +93,10 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById('playButton').textContent = '▶';
         }
     });
-	function portrait4() {
-		dorm4.forEach((dorm4, dorm4Index) => {
-            const elements = Array.from(dorm4.children);
-            const elementsToAnimate = (dorm4Index%2 === 1) ? elements.reverse() : elements;
+	function portrait7() {
+		dorm7.forEach((dorm7, dorm7Index) => {
+            const elements = Array.from(dorm7.children);
+            const elementsToAnimate = (dorm7Index%2 === 1) ? elements.reverse() : elements;
 
             elementsToAnimate.forEach((element) => {
                 setTimeout(() => {
@@ -143,8 +143,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		document.querySelectorAll(".grade").forEach(function(grade) {
             grade.style.display = "none";
 		});
-		document.getElementById("4th").style.display = "block";
-		portrait4();
+		document.getElementById("7th").style.display = "block";
+		portrait7();
     });
 	
 	function checkPassword() {
